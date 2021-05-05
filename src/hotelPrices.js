@@ -1,13 +1,12 @@
-let pricelist = [
-    {from: "2020-01-01", to: "2020-02-01", price: 34.5},
-    {from: "2020-02-02", to: "2020-03-01", price: 37.0},
-    {from: "2020-03-02", to: "2020-05-15", price: 39.0},
-    {from: "2020-05-16", to: "2020-06-15", price: 37.0},
-];
-
-function priceListFormatter(pricelist) {
-
-}
-
-
-module.exports = priceListFormatter;
+function logPricelist(pricelist) {
+    let r = [];
+    var sorted = pricelist.sort((a, b) => a.price - b.price);
+    sorted.map((a, b) => {
+      return a.price == sorted[b == 0 ? (b = 1) : b - 1].price
+        ? (r = r.replace(/\n*$/, `, ${a.from} do ${a.to} \n`))
+        : (r += `${a.price.toFixed(1)} : ${a.from} do ${a.to} \n`);
+    });
+    return r;
+  }
+  
+  module.exports = logPricelist;
