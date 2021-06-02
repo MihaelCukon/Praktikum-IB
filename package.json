@@ -4,7 +4,7 @@
   "description": "TDD demo scripts",
   "main": "index.js",
   "scripts": {
-    "test": "mocha src/test/mapTest.js",
+    "test": "mocha src/test/reduceTest.js",
     "watch": "mocha --watch src/**/**.spec.js"
   },
   "repository": {

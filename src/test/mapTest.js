@@ -2,10 +2,10 @@ const chai = require("chai");
 const { expect } = chai;
 const {
   mapa,
-  duljinaSlova,
   dijeljenje,
   zbrajanje,
   oduzimanje,
+  duljinaSlova,
   malaSlova,
   velikaSlova,
 } = require("../mapexamples.js");
